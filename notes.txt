@@ -1,0 +1,27 @@
+sources:
+https://expressjs.com/en/starter/installing.html
+https://devcenter.heroku.com/articles/mean-apps-restful-api#create-a-restful-api-server-with-node-js-and-express
+https://github.com/mongodb/node-mongodb-native?_ga=1.156492092.662319545.1469055597
+http://wesleytsai.io/2015/07/26/mongodb-server-directory-permission-denied/
+
+$ brew install node (also installs npm)
+
+$ mkdir runnerapi && cd runnerapi
+
+$ npm init (hit ENTER at every step to accept defaults)
+
+$ npm install express --save (makes express a dependency for this project)
+
+$ brew install mongodb
+
+$ mongod --dbpath=/data --port 27017
+
+$ npm install mongodb --save
+
+$ sudo mkdir /data/db
+
+$ sudo chown -R $USER /data/db
+
+$ mongod (will start with defaults - db at /data/db and port=27017)
+
+$ npm install body-parser --save
