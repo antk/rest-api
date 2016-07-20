@@ -38,4 +38,24 @@ app.get('/', function(req, res) {
 
 // define CRUD (create, read, update, delete) routes
 
+app.get('/runners/all', function(req, res) {
+
+});
+
+app.get('/runners/:id', function(req, res) {
+
+});
+
+app.post('/runners/add', function(req, res) {
+
+});
+
+app.put('/runners/update/:id', function(req, res) {
+
+});
+
+app.delete('/runners/remove/:id', function(req, res) {
+
+});
+
 
