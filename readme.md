@@ -12,6 +12,13 @@
 
 `$ brew install node`
 
+####Install MongoDB
+```
+$ brew install mongodb
+$ sudo mkdir /data/db
+$ sudo chown -R $USER /data/db
+```
+
 ####Clone this repo
 
 `$ git clone git@bitbucket.org:antk/runnerapi.git`
@@ -20,6 +27,9 @@
 
 `$ npm install`
 
+####Start MongoDB
+`$ mongod #starts with defaults - db at /data/db and port=27017`
+
 ####Start the server
 
 `$ node app.js`
@@ -27,15 +37,13 @@
 ####Hit the server with some test curls
 
 #####Add runners
-`
+```
 $ curl -H "Content-Type: application/json" -d '{"firstName":"Peter", "lastName": "Parker", "email": "test1@test.com", "distance":0, "time":0, "userName": "test_username", "tokens": 0, "superTokens":0, "bugsSquashed":0}' http://localhost:3000/runners/add
-`
-`
+
 $ curl -H "Content-Type: application/json" -d '{"firstName":"Eddie", "lastName": "Brock", "email": "test2@test.com", "distance":0, "time":0, "userName": "test_username", "tokens": 0, "superTokens":0, "bugsSquashed":0}' http://localhost:3000/runners/add
-`
-`
+
 $ curl -H "Content-Type: application/json" -d '{"firstName":"Flash", "lastName": "Thompson", "email": "test3@test.com", "distance":0, "time":0, "userName": "test_username", "tokens": 0, "superTokens":0, "bugsSquashed":0}' http://localhost:3000/runners/add
-`
+```
 
 #####Get all runners
 `$ curl http://localhost:3000/runners`
