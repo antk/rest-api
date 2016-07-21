@@ -14,18 +14,6 @@ var url = 'mongodb://localhost:27017/runnerapi';
 var RUNNERS_COLLECTION = "runners";
 var db;
 
-// create index on email
-var indexRunners = function(db, callback) {
-  db.collection(RUNNERS_COLLECTION).createIndex(
-    {"email":1, "_id":1}, 
-    {"unique":true},
-    function(err, results) {
-      console.log(results);
-      callback();
-    }
-  );
-};
-
 // connect to the database before starting app server
 MongoClient.connect(url, function(err, database) {
   if(err) {
@@ -36,12 +24,11 @@ MongoClient.connect(url, function(err, database) {
   // save database object from callback for reuse
   db = database;
   console.log('Database connection ready');
-  // indexRunners(db, function() { });
 
   // initialize app
   var server = app.listen(3000, function() {
     var port = server.address().port;
-    console.log('Example app listening on port', port);
+    console.log('App server listening on port', port);
   });
 });
 
