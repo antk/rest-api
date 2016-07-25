@@ -56,3 +56,10 @@ $ curl -H "Content-Type: application/json" -d '{"firstName":"Flash", "lastName":
 
 #####Delete a runner (get a uid from the all runners curl result)
 `$ curl -X DELETE http://localhost:3000/runners/remove/uid`
+
+
+#####Resources
+* [https://expressjs.com/en/starter/installing.html](https://expressjs.com/en/starter/installing.html)
+* [https://devcenter.heroku.com/articles/mean-apps-restful-api#create-a-restful-api-server-with-node-js-and-express](https://devcenter.heroku.com/articles/mean-apps-restful-api#create-a-restful-api-server-with-node-js-and-express)
+* [https://github.com/mongodb/node-mongodb-native?_ga=1.156492092.662319545.1469055597](https://github.com/mongodb/node-mongodb-native?_ga=1.156492092.662319545.1469055597)
+* [http://wesleytsai.io/2015/07/26/mongodb-server-directory-permission-denied/](http://wesleytsai.io/2015/07/26/mongodb-server-directory-permission-denied/)
